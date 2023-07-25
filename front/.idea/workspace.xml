@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="75073115-6652-45c8-8b41-515234974884" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../back/src/main/java/mallang/oauth/common/config/JpaConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../back/src/main/java/mallang/oauth/common/config/WebConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../back/src/main/java/mallang/oauth/common/domain/BaseEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../back/src/main/java/mallang/oauth/common/exception/BaseException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../back/src/main/java/mallang/oauth/common/exception/BaseExceptionType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../back/src/main/java/mallang/oauth/common/exception/ExceptionControllerAdvice.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../back/src/main/java/mallang/oauth/common/exception/ExceptionResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/untitled/.idea/JetClient/state.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/untitled/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/untitled/.idea/restkit/RESTKit_CommonSetting.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/untitled/.idea/restkit/RESTKit_Environment.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/untitled/.idea/restkit/RESTKit_RequestSetting.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/untitled/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/untitled/src/Button.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/untitled/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/untitled/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/untitled/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/untitled/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/untitled/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/untitled/src/App.js" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="2T4eRs1jgbz5A5iNdIqsFAuR2zP" />
+  <component name="ProjectViewState">
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "main",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="75073115-6652-45c8-8b41-515234974884" name="Changes" comment="" />
+      <created>1690306774771</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1690306774771</updated>
+      <workItem from="1690306777534" duration="3000" />
+    </task>
+    <servers />
+  </component>
+</project>
