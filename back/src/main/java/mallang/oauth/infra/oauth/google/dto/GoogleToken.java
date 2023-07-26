@@ -1,16 +1,14 @@
-package mallang.oauth.infra.oauth.kakao.dto;
+package mallang.oauth.infra.oauth.google.dto;
 
 import com.fasterxml.jackson.databind.PropertyNamingStrategies.SnakeCaseStrategy;
 import com.fasterxml.jackson.databind.annotation.JsonNaming;
 
 @JsonNaming(value = SnakeCaseStrategy.class)
-public record KakaoToken(
-        String tokenType,
+public record GoogleToken(
         String accessToken,
-        String idToken,
         Integer expiresIn,
         String refreshToken,
-        Integer refreshTokenExpiresIn,
-        String scope
+        String scope,
+        String tokenType
 ) {
 }

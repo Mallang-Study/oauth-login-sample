@@ -1,16 +1,15 @@
-package mallang.oauth.infra.oauth.kakao.dto;
+package mallang.oauth.infra.oauth.naver.dto;
 
 import com.fasterxml.jackson.databind.PropertyNamingStrategies.SnakeCaseStrategy;
 import com.fasterxml.jackson.databind.annotation.JsonNaming;
 
 @JsonNaming(value = SnakeCaseStrategy.class)
-public record KakaoToken(
-        String tokenType,
+public record NaverToken(
         String accessToken,
-        String idToken,
-        Integer expiresIn,
         String refreshToken,
-        Integer refreshTokenExpiresIn,
-        String scope
+        String tokenType,
+        Integer expiresIn,
+        String error,
+        String errorDescription
 ) {
 }

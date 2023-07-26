@@ -1,12 +1,12 @@
 package mallang.oauth.presentation;
 
-import mallang.oauth.domain.OauthServer;
+import mallang.oauth.domain.OauthServerType;
 import org.springframework.core.convert.converter.Converter;
 
-public class OauthServerConverter implements Converter<String, OauthServer> {
+public class OauthServerConverter implements Converter<String, OauthServerType> {
 
     @Override
-    public OauthServer convert(String source) {
-        return OauthServer.fromName(source);
+    public OauthServerType convert(String source) {
+        return OauthServerType.fromName(source);
     }
 }

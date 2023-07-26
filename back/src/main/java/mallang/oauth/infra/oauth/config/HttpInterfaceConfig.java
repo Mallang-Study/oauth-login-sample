@@ -1,6 +1,8 @@
 package mallang.oauth.infra.oauth.config;
 
+import mallang.oauth.infra.oauth.google.client.GoogleApiClient;
 import mallang.oauth.infra.oauth.kakao.client.KakaoApiClient;
+import mallang.oauth.infra.oauth.naver.client.NaverApiClient;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.reactive.function.client.WebClient;
@@ -12,9 +14,23 @@ public class HttpInterfaceConfig {
 
     @Bean
     public KakaoApiClient kakaoApiClient() {
+        return createHttpInterface(KakaoApiClient.class);
+    }
+
+    @Bean
+    public NaverApiClient naverApiClient() {
+        return createHttpInterface(NaverApiClient.class);
+    }
+
+    @Bean
+    public GoogleApiClient googleApiClient() {
+        return createHttpInterface(GoogleApiClient.class);
+    }
+
+    private <T> T createHttpInterface(Class<T> clazz) {
         WebClient webClient = WebClient.create();
         HttpServiceProxyFactory build = HttpServiceProxyFactory
                 .builder(WebClientAdapter.forClient(webClient)).build();
-        return build.createClient(KakaoApiClient.class);
+        return build.createClient(clazz);
     }
 }

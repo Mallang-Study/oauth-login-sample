@@ -1,11 +1,11 @@
 package mallang.oauth.domain.client;
 
 import mallang.oauth.domain.OauthMember;
-import mallang.oauth.domain.OauthServer;
+import mallang.oauth.domain.OauthServerType;
 
 public interface OauthMemberClient {
 
-    OauthServer supportServer();
+    OauthServerType supportServer();
 
     OauthMember fetch(String code);
 }

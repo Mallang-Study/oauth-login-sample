@@ -1,10 +1,10 @@
 package mallang.oauth.presentation;
 
-import mallang.oauth.application.OAuthService;
-import mallang.oauth.domain.OauthServer;
 import jakarta.servlet.http.HttpServletResponse;
 import lombok.RequiredArgsConstructor;
 import lombok.SneakyThrows;
+import mallang.oauth.application.OauthService;
+import mallang.oauth.domain.OauthServerType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -15,30 +15,30 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequiredArgsConstructor
 @RequestMapping("/oauth")
-public class OAuthLoginController {
+public class OauthController {
 
-    private final OAuthService oauthService;
+    private final OauthService oauthService;
 
     @SneakyThrows
-    @GetMapping("/{oauthServer}")
-    ResponseEntity<Void> redirectAuthorizationCodeIssueUrl(
-            @PathVariable OauthServer oauthServer,
+    @GetMapping("/{oauthServerType}")
+    ResponseEntity<Void> redirectAuthCodeRequestUrl(
+            @PathVariable OauthServerType oauthServerType,
             HttpServletResponse response
     ) {
-        String redirectUrl = oauthService.getAuthorizationCodeIssueUrl(oauthServer);
+        String redirectUrl = oauthService.getAuthCodeRequestUrl(oauthServerType);
         response.sendRedirect(redirectUrl);
         return ResponseEntity.ok().build();
     }
 
     @SneakyThrows
-    @GetMapping("/redirected/{oauthServer}")
+    @GetMapping("/redirected/{oauthServerType}")
     ResponseEntity<Long> login(
-            @PathVariable OauthServer oauthServer,
+            @PathVariable OauthServerType oauthServerType,
             @RequestParam("code") String code,
             HttpServletResponse response
     ) {
-        Long login = oauthService.login(oauthServer, code);
-        response.sendRedirect("http://localhost:3000/mallang");
+        Long login = oauthService.login(oauthServerType, code);
+        response.sendRedirect("http://localhost:3000/mallang?accessToken=" + login);
         return ResponseEntity.ok(login);
     }
 }
