@@ -2,13 +2,11 @@ package mallang.oauth.domain.authcode;
 
 import static java.util.function.Function.identity;
 import static java.util.stream.Collectors.toMap;
-import static mallang.oauth.exception.AuthExceptionType.UNSUPPORTED_OAUTH_TYPE;
 
 import java.util.Map;
 import java.util.Optional;
 import java.util.Set;
 import mallang.oauth.domain.OauthServerType;
-import mallang.oauth.exception.AuthException;
 import org.springframework.stereotype.Component;
 
 @Component
@@ -30,6 +28,6 @@ public class AuthCodeRequestUrlProviderComposite {
 
     public AuthCodeRequestUrlProvider getProvider(OauthServerType oauthServerType) {
         return Optional.ofNullable(mapping.get(oauthServerType))
-                .orElseThrow(() -> new AuthException(UNSUPPORTED_OAUTH_TYPE));
+                .orElseThrow(() -> new RuntimeException("지원하지 않는 소셜 로그인 타입입니다."));
     }
 }

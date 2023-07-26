@@ -12,9 +12,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-@RestController
 @RequiredArgsConstructor
 @RequestMapping("/oauth")
+@RestController
 public class OauthController {
 
     private final OauthService oauthService;
@@ -31,7 +31,7 @@ public class OauthController {
     }
 
     @SneakyThrows
-    @GetMapping("/redirected/{oauthServerType}")
+    @GetMapping("/login/{oauthServerType}")
     ResponseEntity<Long> login(
             @PathVariable OauthServerType oauthServerType,
             @RequestParam("code") String code,
