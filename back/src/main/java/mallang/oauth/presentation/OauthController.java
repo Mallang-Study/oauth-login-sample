@@ -30,15 +30,12 @@ public class OauthController {
         return ResponseEntity.ok().build();
     }
 
-    @SneakyThrows
     @GetMapping("/login/{oauthServerType}")
     ResponseEntity<Long> login(
             @PathVariable OauthServerType oauthServerType,
-            @RequestParam("code") String code,
-            HttpServletResponse response
+            @RequestParam("code") String code
     ) {
         Long login = oauthService.login(oauthServerType, code);
-        response.sendRedirect("http://localhost:3000/mallang?accessToken=" + login);
         return ResponseEntity.ok(login);
     }
 }

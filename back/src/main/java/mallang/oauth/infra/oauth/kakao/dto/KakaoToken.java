@@ -3,7 +3,7 @@ package mallang.oauth.infra.oauth.kakao.dto;
 import com.fasterxml.jackson.databind.PropertyNamingStrategies.SnakeCaseStrategy;
 import com.fasterxml.jackson.databind.annotation.JsonNaming;
 
-@JsonNaming(value = SnakeCaseStrategy.class)
+@JsonNaming(SnakeCaseStrategy.class)
 public record KakaoToken(
         String tokenType,
         String accessToken,

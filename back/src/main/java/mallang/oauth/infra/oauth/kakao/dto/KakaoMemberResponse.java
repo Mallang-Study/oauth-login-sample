@@ -8,7 +8,7 @@ import java.time.LocalDateTime;
 import mallang.oauth.domain.OauthId;
 import mallang.oauth.domain.OauthMember;
 
-@JsonNaming(value = SnakeCaseStrategy.class)
+@JsonNaming(SnakeCaseStrategy.class)
 public record KakaoMemberResponse(
         Long id,
         boolean hasSignedUp,
@@ -24,7 +24,7 @@ public record KakaoMemberResponse(
                 .build();
     }
 
-    @JsonNaming(value = SnakeCaseStrategy.class)
+    @JsonNaming(SnakeCaseStrategy.class)
     public record KakaoAccount(
             boolean profileNeedsAgreement,
             boolean profileNicknameNeedsAgreement,
@@ -53,7 +53,7 @@ public record KakaoMemberResponse(
     ) {
     }
 
-    @JsonNaming(value = SnakeCaseStrategy.class)
+    @JsonNaming(SnakeCaseStrategy.class)
     public record Profile(
             String nickname,
             String thumbnailImageUrl,

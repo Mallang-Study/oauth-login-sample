@@ -6,7 +6,7 @@ public enum OauthServerType {
 
     KAKAO,
     NAVER,
-    GOOGLE,
+    GOOGLE
     ;
 
     public static OauthServerType fromName(String type) {
